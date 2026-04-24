@@ -454,6 +454,46 @@ nav.stuck {
   line-height: 1.85;
 }
 
+/* card subtitle */
+.scard-sub {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--ink3);
+  margin-bottom: 14px;
+  margin-top: -8px;
+}
+
+/* benefit list */
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 18px 16px;
+  background: var(--accent-bg);
+  border-radius: 6px;
+}
+.scard:nth-child(2) .benefit-list { background: var(--sage-bg); }
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+.benefit-icon {
+  font-size: 0.85rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-weight: 700;
+}
+.scard:nth-child(2) .benefit-icon { color: var(--sage); }
+.benefit-item strong { color: var(--ink); font-weight: 600; }
+
 /* ── APPROACH ── */
 .approach-layout {
   display: grid;
@@ -801,6 +841,22 @@ footer {
 }
 .footer-links a:hover { color: var(--accent); }
 
+/* ── WATERMARK ── */
+.watermark {
+  position: fixed;
+  bottom: 18px;
+  right: 22px;
+  font-family: 'Fraunces', serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink3);
+  opacity: 0.35;
+  letter-spacing: -0.01em;
+  z-index: 100;
+  pointer-events: none;
+  user-select: none;
+}
+
 /* ── SCROLL REVEAL ── */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s, transform 0.65s; }
 .reveal.on { opacity: 1; transform: none; }
@@ -842,13 +898,13 @@ footer {
   <div class="hero-rule"></div>
 
   <h1>
-    Sanayi ve Eğitimde<br>
+    Sanayinin<br>
     <em>Dijital İkiz</em><br>
     Dönüşümü
   </h1>
 
   <p class="hero-sub">
-    Sanayi ve eğitim süreçlerinin veriye dayalı yönetim sistemleri ile yapılandırılması. Taşkent merkezli, Türkiye standartlarında.
+    Fiziksel varlıkların dijital kopyalarını oluşturarak sanayiyi yalnızca izlenebilir değil — yönetilebilir ve öngörülebilir hale getiriyoruz. Türkiye'nin OSB tecrübesini, Özbekistan'ın sanayi potansiyeliyle dijital bir köprü üzerinden birleştiriyoruz.
   </p>
 
   <div class="hero-actions">
@@ -865,63 +921,92 @@ footer {
 <!-- SERVICES -->
 <section class="sec sec-alt" id="services">
   <div class="sec-eyebrow reveal">Faaliyet Alanları</div>
-  <h2 class="sec-title reveal">Üç Temel <em>Çözüm</em> Katmanı</h2>
-  <p class="sec-intro reveal">Endüstriyel varlıklardan eğitim kurumlarına kadar — veriye dayalı yönetim sistemleriyle kalıcı dönüşüm.</p>
+  <h2 class="sec-title reveal">Üç Temel <em>Dijital İkiz</em> Katmanı</h2>
+  <p class="sec-intro reveal">DigiTwins, karmaşık sanayi ekosistemlerinde hata payını sıfıra indirir, şeffaflığı artırır ve yatırım süreçlerini hızlandırır — arazi yönetiminden fabrika verimliliğine kadar.</p>
 
   <div class="services-grid">
 
+    <!-- CARD 1 -->
     <div class="scard reveal">
       <span class="scard-index">01 / 03</span>
-      <div class="scard-label">DigiTwins Industry</div>
-      <div class="scard-title">Sanayi Teknolojileri</div>
-      <p class="scard-desc">Endüstriyel varlıkların ve yönetim süreçlerinin dijital modeller üzerinden gerçek zamanlı takibi.</p>
+      <div class="scard-label">Bölgesel Dijital İkiz</div>
+      <div class="scard-title">InvestMagnet</div>
+      <p class="scard-sub">Akıllı Arazi Yönetimi</p>
+      <p class="scard-desc">Sanayi bölgelerinin ve geniş ölçekli arazilerin tüm mülkiyet, altyapı ve kullanım verilerinin dijital bir harita üzerinde birleştirilmesidir.</p>
       <div class="product-list">
         <div class="product">
-          <div class="product-name">InvestMagnet</div>
-          <div class="product-desc">Sanayi arazilerinin harita tabanlı yönetimi ve tahsis süreçlerinin dijitalleştirilmesi. Altyapı ve lojistik verilerinin doğruluğu ile yatırım planlamasının kolaylaştırılması.</div>
+          <div class="product-name">Hassas Veri Entegrasyonu</div>
+          <div class="product-desc">Parselasyon, kadastro ve mülkiyet bilgilerinin CBS tabanlı yönetimi.</div>
         </div>
         <div class="product">
-          <div class="product-name">OSB Yönetim Sistemi (ERP)</div>
-          <div class="product-desc">Sanayi bölgelerinin idari, mali ve teknik işleyişi için tasarlanmış yönetim altyapısı. Enerji dağıtımı ve ruhsat süreçlerinin kayıt altına alınması.</div>
+          <div class="product-name">Altyapı Görünürlüğü</div>
+          <div class="product-desc">Toprak altındaki elektrik, doğalgaz, su ve fiber hatlarının milimetrik takibi.</div>
         </div>
         <div class="product">
-          <div class="product-name">Üretim İzleme Sistemleri (MES)</div>
-          <div class="product-desc">Fabrika verimliliğinin dijital modeller üzerinden izlenmesi. Üretim hatlarındaki performansın gerçek zamanlı verilerle takip edilmesi.</div>
+          <div class="product-name">Yatırımcı Eşleştirme</div>
+          <div class="product-desc">Yatırımcı profiline uygun parselin saniyeler içinde analiz edilmesi.</div>
         </div>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span><strong>%80</strong> daha hızlı arazi tahsis süreci</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Hukuki ve teknik risklerin ortadan kaldırılması</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Veriye dayalı stratejik planlama ve simülasyon</span></div>
       </div>
     </div>
 
+    <!-- CARD 2 -->
     <div class="scard reveal" style="transition-delay:.12s">
       <span class="scard-index">02 / 03</span>
-      <div class="scard-label">DigiTwins Education</div>
-      <div class="scard-title">Eğitim Teknolojileri</div>
-      <p class="scard-desc">Öğrenme süreçlerinin ve kurum yönetiminin dijital imkânlarla desteklenmesi.</p>
+      <div class="scard-label">Kurumsal Dijital İkiz</div>
+      <div class="scard-title">OSB Yönetim Sistemi</div>
+      <p class="scard-sub">Sanayi ERP</p>
+      <p class="scard-desc">Bir Organize Sanayi Bölgesi'nin idari, mali ve teknik tüm operasyonlarının tek bir dijital platformdan yönetilmesidir.</p>
       <div class="product-list">
         <div class="product">
-          <div class="product-name">İçerik Adaptasyonu</div>
-          <div class="product-desc">Uluslararası dijital eğitim materyallerinin yerel müfredata ve ihtiyaçlara uygun hale getirilmesi.</div>
+          <div class="product-name">Akıllı Sayaç ve Enerji Takibi</div>
+          <div class="product-desc">Bölge genelinde enerji tüketiminin anlık izlenmesi ve otomatik faturalandırma.</div>
         </div>
         <div class="product">
-          <div class="product-name">Kurumsal Yönetim</div>
-          <div class="product-desc">Eğitim kurumları için kayıt, ölçme-değerlendirme ve akademik takip süreçlerinin tek merkezden yönetilmesi.</div>
+          <div class="product-name">Dijital Ruhsat ve İzin</div>
+          <div class="product-desc">Fabrika inşaat ve işletme ruhsat süreçlerinin kağıtsız, şeffaf ve hızlı takibi.</div>
         </div>
+        <div class="product">
+          <div class="product-name">Atık ve Çevre Yönetimi</div>
+          <div class="product-desc">Çevresel etkilerin ve atık yönetimi süreçlerinin dijital modellerle denetlenmesi.</div>
+        </div>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Kaçak kullanımın önlenmesi, OPEX düşürülmesi</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Tahsilat oranlarının artırılması</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Tek ekrandan binlerce veriyle hızlı karar alma</span></div>
       </div>
     </div>
 
+    <!-- CARD 3 -->
     <div class="scard reveal" style="transition-delay:.24s">
       <span class="scard-index">03 / 03</span>
-      <div class="scard-label">DigiTwins Edutainment</div>
-      <div class="scard-title">Dijital Servisler</div>
-      <p class="scard-desc">Geniş kitlelere yönelik eğitici ve oyunlaştırılmış içerik çözümleri.</p>
+      <div class="scard-label">Endüstriyel Dijital İkiz</div>
+      <div class="scard-title">Üretim ve Verimlilik</div>
+      <p class="scard-sub">MES &amp; Model Fabrika</p>
+      <p class="scard-desc">Fabrika içindeki her bir makinenin, personelin ve üretim hattının dijital dünyadaki dinamik kopyasıdır.</p>
       <div class="product-list">
         <div class="product">
-          <div class="product-name">Operatör Çözümleri</div>
-          <div class="product-desc">Telekomünikasyon operatörleri için eğitici ve geliştirici dijital içerik tedariği.</div>
+          <div class="product-name">Gerçek Zamanlı Veri Toplama</div>
+          <div class="product-desc">IoT sensörleri aracılığıyla sahadan gelen canlı verilerin üretim planıyla kıyaslanması.</div>
         </div>
         <div class="product">
-          <div class="product-name">Erişilebilir Eğitim</div>
-          <div class="product-desc">Mobil cihazlar üzerinden ulaşılabilir, güvenli ve oyunlaştırılmış içerik servisleri.</div>
+          <div class="product-name">Dijital Olgunluk Analizi</div>
+          <div class="product-desc">Fabrikanın Endüstri 4.0 yolculuğunda nerede olduğunun ölçülmesi.</div>
         </div>
+        <div class="product">
+          <div class="product-name">Yalın Üretim Simülasyonu</div>
+          <div class="product-desc">Üretim hatlarındaki değişikliklerin fiziksel uygulamadan önce dijital ikiz üzerinde test edilmesi.</div>
+        </div>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>OEE artışı — duruş sürelerinin öngörülmesi</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Fire oranlarının ve hatalı üretimin azaltılması</span></div>
+        <div class="benefit-item"><span class="benefit-icon">↗</span><span>Birim üretim başına karbon ayak izinin minimizasyonu</span></div>
       </div>
     </div>
 
@@ -983,7 +1068,7 @@ footer {
 <!-- PARTNERS -->
 <section class="sec sec-dark" id="partners">
   <div class="partner-header reveal">
-    <span class="ph-label">Ekosistem &amp; Stratejik Partnerlikler</span>
+    <span class="ph-label">Ekosistem &amp; Güvence Kaynakları</span>
     <div class="ph-line"></div>
     <span class="ph-label">TR × UZ</span>
   </div>
@@ -1102,5 +1187,7 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
+<div class="watermark">w</div>
+
 </body>
 </html>
